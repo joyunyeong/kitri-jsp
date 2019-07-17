@@ -16,3 +16,4 @@ String root = request.getContextPath();
 <a href="<%=root%>/user?act=mvlogin">로그인</a><br>
 </div>
 </body>
+

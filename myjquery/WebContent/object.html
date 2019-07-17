@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>object.html</title>
+<script>
+var personObj = {name:'오문정' ,
+		  gender: 'F',
+		  address:'송파구',
+		  walk: function(){
+			console.log(this.name + "이 두발로 걷는다");  
+		  }
+	};
+console.log(personObj.name); //오문정	
+personObj.walk();
+</script>
+</head>
+<body>
+
+</body>
+</html>

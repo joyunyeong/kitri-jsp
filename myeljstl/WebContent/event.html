@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event.html</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	//DOM트리에서 div>a객체 찾기
+	var $aObj = $("div>a");
+	$aObj.click(function(){
+		alert("클릭되었습니다");
+		$(this).css("background-color","yellow");
+		return false;
+	});
+	$("div").click(function(){
+		$(this).css("background-color","gray");
+	});	
+});
+
+//window객체에서 load이벤트가 발생했을때 처리할 핸들러작성하기
+/* window.addEventListener("load", function(){
+	//DOM트리에서 div>a객체 찾기
+	var aObj = document.querySelector("div>a");
+	
+	//aObj객체에서 클릭이벤트가 발생했을때 처리할 핸들러 작성하기
+	//할일 : "클릭되었습니다"메시지를 경고창(alert)에 띄우기
+	//     : 배경색을 yellow로 변경
+	aObj.addEventListener("click",function(event){
+		alert("클릭되었습니다");
+		this.style.backgroundColor='yellow';
+		event.preventDefault();	
+		event.stopPropagation();		
+	});
+	
+	
+	//DOM트리에서 div객체찾기
+	var divObj = document.querySelector("div");
+	
+	//divObj객체에서 클릭이벤트가 발생했을때
+	//할일 : 배경색을 gray로 변경
+	divObj.addEventListener("click",function(){
+		this.style.backgroundColor="gray";
+	});	
+}); */
+</script>
+</head>
+<body>
+<div>
+  <h3>DIV1</h3>
+  <a href="http://www.google.com">구글</a>
+</div>
+</body>
+</html>
